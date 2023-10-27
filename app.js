@@ -8,4 +8,8 @@ app.use(express.json());
 
 app.use("/transactions", transactionController);
 
+app.use("*", (req, res) => {
+    res.status(404).json({ error: "Page doesn't exist!" })
+})
+
 module.exports = app;
