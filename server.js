@@ -1,4 +1,5 @@
 const app = require("./app.js");
+require("dotenv").config()
 const port = process.env.PORT || 5555;
 
 app.get("/", (req, res) => {
